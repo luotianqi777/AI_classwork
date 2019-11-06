@@ -20,26 +20,26 @@
 	\begin{tikzpicture}[node distance = 1.5cm]
 		\node[r](nellie){Nellie};
 		\node[r,below of=nellie](ele){Elephant};
-		\node[r,left of=nellie, xshift=-1cm](apple){Like Apple};
-		\node[r,left of=ele, xshift=-1cm](africa){In Africa};
+		\node[r,left of=nellie, xshift=-1.5cm](apple){Apple};
+		\node[r,left of=ele, xshift=-1.5cm](africa){Africa};
 		\node[r,right of=ele, xshift=1cm](big){Big};
 		\node[r,below of=ele](mammals){Mammals};
 		\node[r,below of=mammals](animals){Animals};
-		\node[r,left of=animals, xshift=-1cm](head){Have Head};
+		\node[r,left of=animals, xshift=-1.5cm](head){Head};
 		\node[r,right of=animals, xshift=1cm](reptiles){Reptiles};
 		
-		\draw[->](nellie)--(ele);
-		\draw[->](nellie)--(apple);
-		\draw[->](ele)--(mammals);
-		\draw[->](ele)--(africa);
-		\draw[->](ele)--(big);
-		\draw[->](mammals)--(animals);
-		\draw[->](reptiles)--(animals);
-		\draw[->](animals)--(head);
+		\draw[->](nellie)--node[right]{is}(ele);
+		\draw[->](nellie)--node[above]{like}(apple);
+		\draw[->](ele)--node[right]{is}(mammals);
+		\draw[->](ele)--node[above]{in}(africa);
+		\draw[->](ele)--node[above]{is}(big);
+		\draw[->](mammals)--node[right]{is}(animals);
+		\draw[->](reptiles)--node[above]{is}(animals);
+		\draw[->](animals)--node[above]{have}(head);
 	\end{tikzpicture}
 	\section{汉诺塔结果}
-		\verbatiminput{code/out.txt}
+		\verbatiminput{out.txt}
 	\section{汉诺塔代码}
-		\verbatiminput{code/hannuota.py}
+		\verbatiminput{hannuota.py}
 	
 \end{document}
