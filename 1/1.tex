@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage[left=1in,right=1in,top=0.7in,bottom=0.7in]{geometry}
+\twocolumn
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\tikzstyle{r} = [rectangle, minimum width=2cm, minimum height=1cm, text centered, draw=black]
+
+\title{人工智能作业}
+\author{骆天奇\\2016254060407}
+%\date{19.11.6}
+\date{\today}
+
+\begin{document}
+	\maketitle
+	\section{semantic networks}
+	\begin{tikzpicture}[node distance = 1.5cm]
+		\node[r](nellie){Nellie};
+		\node[r,below of=nellie](ele){Elephant};
+		\node[r,left of=nellie, xshift=-1cm](apple){Like Apple};
+		\node[r,left of=ele, xshift=-1cm](africa){In Africa};
+		\node[r,right of=ele, xshift=1cm](big){Big};
+		\node[r,below of=ele](mammals){Mammals};
+		\node[r,below of=mammals](animals){Animals};
+		\node[r,left of=animals, xshift=-1cm](head){Have Head};
+		\node[r,right of=animals, xshift=1cm](reptiles){Reptiles};
+		
+		\draw[->](nellie)--(ele);
+		\draw[->](nellie)--(apple);
+		\draw[->](ele)--(mammals);
+		\draw[->](ele)--(africa);
+		\draw[->](ele)--(big);
+		\draw[->](mammals)--(animals);
+		\draw[->](reptiles)--(animals);
+		\draw[->](animals)--(head);
+	\end{tikzpicture}
+	\section{汉诺塔结果}
+		\verbatiminput{code/out.txt}
+	\section{汉诺塔代码}
+		\verbatiminput{code/hannuota.py}
+	
+\end{document}
