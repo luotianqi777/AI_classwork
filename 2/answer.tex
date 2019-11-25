@@ -1,0 +1,37 @@
+\begin{answer}
+	\ \\
+	\begin{tabular}{ll}
+		\hline
+		符号&定义\\
+		\hline
+		$Li$&小李\\
+		$Wu$&小吴\\
+		$Course$&课程\\
+		$Phy200$&一门物理课\\
+		$Eng300$&一门工程课\\
+		$Eng(C)$&课程C是工程课\\
+		$Phy(C)$&课程C是物理课\\
+		$Easy(C)$&课程C容易\\
+		$Difficult(C)$&课程C难\\
+		$Like(W,C)$&W喜欢课程C\\
+		\hline
+	\end{tabular}
+	\begin{enumerate}[label=\circled{\arabic*}]
+		\item $(\forall C) (Eazy(C) \Rightarrow Like(Li,C))$
+		\item $(\forall C) (Diffcult(C) \Rightarrow \lnot Like(Li,C))$
+		\item $(\forall C) (Eng(C) \Rightarrow Diffcult(C))$
+		\item $(\forall C) (Phy(C) \Rightarrow Easy(C))$
+		\item $(\forall C) (\lnot Like(Li,C) \Rightarrow Like(Wu,C))$
+		\item $Phy(Phy200)$
+		\item $Eng(Eng300)$
+	\end{enumerate}
+	由\circled{4}$\wedge$\circled{1}得
+	\begin{align}
+%		&(\forall C)((\lnot Easy(C) \vee Like(Li,C)) \wedge (\lnot Phy(C) \vee Easy(C))) \notag \\
+%		=&(\lnot Easy(C) \vee Like(Li,C)) \wedge (\lnot Phy(C) \vee Easy(C)) \notag\\
+%		=&(\lnot Easy(C) \wedge (\lnot Phy(C) \vee Easy(C))) \vee (Like(Li,C) \wedge (\lnot Phy(C) \vee Easy(C))) \notag \\
+		(\forall C)& (Phy(C) \Rightarrow Easy(C)) \wedge (Eazy(C) \Rightarrow Like(Li,C)) \notag\\
+		(\forall C)& (Phy(C) \Rightarrow Like(Li,C)) \notag
+	\end{align}
+	
+\end{answer}

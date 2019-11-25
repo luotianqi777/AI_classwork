@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{enumerate}
+\usepackage[left=2cm,right=2cm,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\theoremstyle{definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+
+\usepackage{etoolbox}
+\usepackage{enumitem}
+\newcommand*{\circled}[2][5]{
+	\lower.7ex\hbox{\tikz
+		\draw (0, 0) circle (.#1em)
+		node{\makebox[0cm][c]{\small #2}};
+		}
+	}
+\robustify{\circled}
+	
+	
+\twocolumn
+
+\title{人工智能作业}
+\author{骆天奇\\2016254060407}
+%\date{19.11.25}
+\date{}
+\begin{document}
+	\maketitle
+	\input{question.tex}
+	\input{answer.tex}
+\end{document}
