@@ -1,23 +1,28 @@
 \documentclass{article}
 \usepackage{ctex}
+\usepackage{float}
 \usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\tikzstyle{r} = [rectangle, minimum width=2cm, minimum height=1cm, text centered, draw=black]
+
 \usepackage{enumerate}
-\usepackage[left=2cm,right=2cm,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage[a4paper,left=1cm,right=1cm,top=.5cm,bottom=.5cm]{geometry}
 \usepackage{amsthm}
 \usepackage{amsmath}
 \theoremstyle{definition}
 \newtheorem{question}{Question}
 \newtheorem{answer}{Answer}
+\newtheorem{subanswer}{answer}[answer]
 
 \usepackage{etoolbox}
-\usepackage{enumitem}
-\newcommand*{\circled}[2][5]{
-	\lower.7ex\hbox{\tikz
-		\draw (0, 0) circle (.#1em)
-		node{\makebox[0cm][c]{\small #2}};
-		}
-	}
-\robustify{\circled}
+%\usepackage{enumitem}
+%\newcommand*{\circled}[2][5]{
+%	\lower.7ex\hbox{\tikz
+%		\draw (0, 0) circle (.#1em)
+%		node{\makebox[0cm][c]{\small #2}};
+%		}
+%	}
+%\robustify{\circled}
 	
 	
 \twocolumn
@@ -27,7 +32,7 @@
 %\date{19.11.25}
 \date{}
 \begin{document}
-	\maketitle
-	\input{question.tex}
+	%\maketitle
+	%\input{question.tex}
 	\input{answer.tex}
 \end{document}
