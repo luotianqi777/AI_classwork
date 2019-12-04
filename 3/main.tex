@@ -1,0 +1,36 @@
+\documentclass{article}
+
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{xifthen}
+\usepackage[a4paper,left=1cm,right=1cm,top=2cm,bottom=2.5cm]{geometry}
+\newtheorem{answer}{Answer}
+\newtheorem{subanswer}{answer}[answer]
+\newcommand{\bayes}[4]{
+	P(#1_#3|#2)=&
+	\frac{P(#1_#3)P(#2|#1_#3)}
+	{\sum\limits_{j=1}^{#4} P(#1_j)P(#2|#1_j)}
+}
+\newcommand{\Bayest}{
+	P(H_i|E_1E_2\dots E_m)=
+	\frac{P(H_i)\prod\limits_{j=1}^{m}P(E_j|H_i)}
+	{\sum\limits_{j=1}^{n}\big(P(H_j)\prod\limits_{k=1}^{m}P(E_k|H_j)\big)}
+}
+\newcommand{\Bayes}[1]{
+	P(H_#1|E_1E_2)=&
+	\frac{P(E_1|H_#1)P(E_2|H_#1)P(H_#1)}
+	{\sum\limits_{i=1}^{3}P(E_1|H_i)P(E_2|H_i)P(H_i)}
+}
+
+\title{人工智能作业}
+\author{信息与计算科学1601\\ 骆天奇\\ 2016254060407}
+\date{\today}
+%\date{12.4}
+\twocolumn
+
+\begin{document}
+%	\maketitle
+	\paragraph{信息与计算科学1601 骆天奇 2016254060407}
+	\input{1.tex}
+%	\input{2.tex}
+\end{document}
